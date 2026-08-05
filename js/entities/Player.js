@@ -1,43 +1,43 @@
-import { autoSliceSheet } from '../core/SpriteSheetSlicer.js';
+import { loadAsepriteSheet } from '../core/AsepriteSheetLoader.js';
 
 export class Player {
-  constructor(sheetUrl) {
-    this.sheetUrl = sheetUrl;
-    this.rows = []; // rectángulos detectados, uno por fila de animación
-    this.rowTextures = []; // PIXI.Texture recortadas, por fila
+  constructor(jsonUrl, imageUrl) {
+    this.jsonUrl = jsonUrl;
+    this.imageUrl = imageUrl;
+    this.animations = {}; // { Idle: [tex...], Walk: [tex...], ... }
     this.sprite = null;
+    this.currentState = null;
   }
 
   async load() {
-    // encodeURI escapes spaces and special characters in the path
-    const { image, rows } = await autoSliceSheet(encodeURI(this.sheetUrl));
-    this.rows = rows;
+    const { animations } = await loadAsepriteSheet(this.jsonUrl, this.imageUrl);
+    this.animations = animations;
 
-    const baseTexture = PIXI.Texture.from(image);
-
-    this.rowTextures = rows.map((row) =>
-      row.map(
-        (f) =>
-          new PIXI.Texture({
-            source: baseTexture.source,
-            frame: new PIXI.Rectangle(f.x, f.y, f.width, f.height),
-          })
-      )
-    );
-
-    this.sprite = new PIXI.AnimatedSprite(this.rowTextures[0]);
+    this.sprite = new PIXI.AnimatedSprite(this.animations.Idle);
+    // All frames share the same 126x92 canvas (untrimmed export), so a
+    // fixed anchor stays visually consistent across every animation —
+    // this is what fixes the "floating torso" jitter.
     this.sprite.anchor.set(0.5, 1);
-    this.sprite.animationSpeed = 0.15;
+    this.setState('Idle');
     this.sprite.play();
     return this.sprite;
   }
 
-  /** Switches to the animation on detected row N (see debug panel) */
-  setRow(index, fps = 10, loop = true) {
-    if (!this.rowTextures[index]) return;
-    this.sprite.textures = this.rowTextures[index];
-    this.sprite.animationSpeed = fps / 60;
-    this.sprite.loop = loop;
+  /** Switches to a named animation, e.g. player.setState('Walk') */
+  setState(name) {
+    if (this.currentState === name || !this.animations[name]) return;
+    this.currentState = name;
+
+    const isOneShot = ['Attack', 'JumpAttack', 'CrouchAttack', 'Hit', 'HitEff', 'Death', 'DeathEff', 'transformation'].includes(name);
+
+    this.sprite.textures = this.animations[name];
+    this.sprite.animationSpeed = 0.2;
+    this.sprite.loop = !isOneShot;
     this.sprite.gotoAndPlay(0);
+  }
+
+  /** Lists all available animation names (useful for a debug panel) */
+  getAnimationNames() {
+    return Object.keys(this.animations);
   }
 }

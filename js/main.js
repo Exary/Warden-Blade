@@ -15,10 +15,12 @@ await app.init({
 document.getElementById('game-container').appendChild(app.canvas);
 
 // ------------------------------------------------------------------
-// Odysseus (Fire_Warrior) — uses the NoEffect version as a "clean" base
+// Odysseus (Fire_Warrior) — now loaded from the real JSON exported via
+// LibreSprite, with named animations and a consistent anchor point.
 // ------------------------------------------------------------------
 const player = new Player(
-  'Assets/Fire_Warrior/Fire_Warrior/Fire_Warrior/Fire_WarriorNoEffect-Sheet.png'
+  'Assets/Fire_Warrior/Fire_WarriorAseprite/Fire_Warrior.json',
+  'Assets/Fire_Warrior/Fire_WarriorAseprite/Fire_Warrior.png'
 );
 const playerSprite = await player.load();
 playerSprite.x = 300;
@@ -37,31 +39,29 @@ enemySprite.scale.set(2.5);
 app.stage.addChild(enemySprite);
 
 // ------------------------------------------------------------------
-// Debug panel: the Fire_Warrior sheet doesn't come with row labels,
-// so we need to eyeball each row to figure out which animation it is.
-// Click each button to preview it on the character.
+// Debug panel: now shows REAL animation names (no more guessing rows)
 // ------------------------------------------------------------------
-debugPanel.innerHTML = `<p><b>${player.rows.length} animation rows detected in Fire_Warrior.</b><br>
-Click each one to preview it, and note the number down — we'll need it to build
-the final animation mapping (idle, walk, dash, etc.) in the next step.</p>`;
+const animNames = player.getAnimationNames();
+debugPanel.innerHTML = `<p><b>${animNames.length} named animations loaded for Odysseus.</b><br>
+Click any button to preview it on the character.</p>`;
 
-player.rows.forEach((row, i) => {
+animNames.forEach((name) => {
   const btn = document.createElement('button');
-  btn.textContent = `Row ${i} (${row.length} frames)`;
-  btn.onclick = () => player.setRow(i);
+  btn.textContent = name;
+  btn.onclick = () => player.setState(name);
   debugPanel.appendChild(btn);
 });
 
 // ------------------------------------------------------------------
-// Very basic test movement (just to see the sprite respond)
-// Placeholder: once we identify which row is "walk", this will hook
-// into the real animation instead of just moving the still sprite.
+// Basic test movement, now wired to the real named animations
 // ------------------------------------------------------------------
 const keys = {};
 window.addEventListener('keydown', (e) => (keys[e.key] = true));
 window.addEventListener('keyup', (e) => (keys[e.key] = false));
 
 app.ticker.add(() => {
+  const moving = keys['ArrowRight'] || keys['ArrowLeft'];
+
   if (keys['ArrowRight']) {
     playerSprite.x += 3;
     playerSprite.scale.x = Math.abs(playerSprite.scale.x);
@@ -70,6 +70,8 @@ app.ticker.add(() => {
     playerSprite.x -= 3;
     playerSprite.scale.x = -Math.abs(playerSprite.scale.x);
   }
+
+  player.setState(moving ? 'Walk' : 'Idle');
 
   // Simple enemy: walks in place to test the "walk" state
   enemy.setState('walk');

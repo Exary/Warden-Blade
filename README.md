@@ -28,7 +28,12 @@ warden-blade/
    directly into the repo folder, at the same level as `index.html`
 2. That's it — nothing needs to be moved or renamed inside it. The code
    already points to the exact confirmed paths:
-   - `Assets/Fire_Warrior/Fire_Warrior/Fire_Warrior/Fire_WarriorNoEffect-Sheet.png`
+   - `Assets/Fire_Warrior/Fire_WarriorAseprite/Fire_Warrior.json`
+   - `Assets/Fire_Warrior/Fire_WarriorAseprite/Fire_Warrior.png`
+     (these two are the LibreSprite export — the JSON + PNG pair with real
+     animation names and pixel-accurate frame coordinates. Drop them into
+     the existing `Fire_WarriorAseprite` folder, next to the `.aseprite`
+     source files)
    - `Assets/Hero_And_Opponents/1 Enemy/PNG/idle-1.png` (and the rest)
 
 You can upload the whole `Assets` folder (with ALL packs, not just these
@@ -83,20 +88,24 @@ prologue is fully playable start to finish").
 
 ## 🔍 What this prototype currently does
 
-- Loads Odysseus (Fire_Warrior) and auto-detects its animation rows (the
-  sheet isn't a uniform grid, so it can't be sliced by hand — the code
-  does it by analyzing transparency)
+- Loads Odysseus (Fire_Warrior) from the real LibreSprite JSON export —
+  24 named animations (Idle, Walk, Run, Attack, Dash, etc.), pixel-accurate
+  frame coordinates, consistent anchor point across all of them (this is
+  what fixed the earlier "floating torso" jitter)
 - Loads Enemy 1 with its real animations (idle, walk, jump, hit, dead,
   attack A, attack B)
-- Debug panel: buttons to preview each detected Fire_Warrior row, so we
-  can identify which one is "idle", which is "walk", etc.
-- Left/right arrow key movement (placeholder, not yet wired to the real
-  animations)
+- Debug panel: buttons for every real animation name, click to preview
+- Arrow key movement, now wired to the real Idle/Walk animations
+
+## 🧰 About SpriteSheetSlicer.js
+
+This file (the transparency-based auto-detector) isn't used by Fire_Warrior
+anymore now that we have real JSON data, but it's kept in the project —
+useful for any future sheet that doesn't come with exported JSON metadata
+(e.g. a raw sheet from a pack that wasn't made in Aseprite).
 
 ## 🔜 Next step
 
-Run it, click through each button in the debug panel, and let me know (or
-send a screenshot) which animation corresponds to which row number — e.g.
-"Row 3 = Idle", "Row 7 = Run". With that we'll build the final mapping in
-`config/` (or an equivalent file for Odysseus) and wire the real
-animations to movement.
+Fine-tune animation speeds per state (right now everything defaults to the
+same speed), then start wiring real combat inputs (attack, dash, jump)
+instead of just Idle/Walk movement testing.

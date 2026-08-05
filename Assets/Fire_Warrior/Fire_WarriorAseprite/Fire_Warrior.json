@@ -1,0 +1,1685 @@
+{ "frames": {
+   "Fire_Warrior 0.aseprite": {
+    "frame": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 1.aseprite": {
+    "frame": { "x": 126, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 2.aseprite": {
+    "frame": { "x": 252, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 3.aseprite": {
+    "frame": { "x": 378, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 4.aseprite": {
+    "frame": { "x": 504, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 5.aseprite": {
+    "frame": { "x": 630, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 6.aseprite": {
+    "frame": { "x": 756, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 7.aseprite": {
+    "frame": { "x": 882, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 8.aseprite": {
+    "frame": { "x": 1008, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 9.aseprite": {
+    "frame": { "x": 1134, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 10.aseprite": {
+    "frame": { "x": 1260, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 11.aseprite": {
+    "frame": { "x": 1386, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 12.aseprite": {
+    "frame": { "x": 1512, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 13.aseprite": {
+    "frame": { "x": 1638, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 14.aseprite": {
+    "frame": { "x": 1764, "y": 0, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 15.aseprite": {
+    "frame": { "x": 0, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 16.aseprite": {
+    "frame": { "x": 126, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 17.aseprite": {
+    "frame": { "x": 252, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 18.aseprite": {
+    "frame": { "x": 378, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 19.aseprite": {
+    "frame": { "x": 504, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 20.aseprite": {
+    "frame": { "x": 630, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 21.aseprite": {
+    "frame": { "x": 756, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 22.aseprite": {
+    "frame": { "x": 882, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 23.aseprite": {
+    "frame": { "x": 1008, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 24.aseprite": {
+    "frame": { "x": 1134, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 25.aseprite": {
+    "frame": { "x": 1260, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 50
+   },
+   "Fire_Warrior 26.aseprite": {
+    "frame": { "x": 1386, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 50
+   },
+   "Fire_Warrior 27.aseprite": {
+    "frame": { "x": 1512, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 50
+   },
+   "Fire_Warrior 28.aseprite": {
+    "frame": { "x": 1638, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 29.aseprite": {
+    "frame": { "x": 1764, "y": 92, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 30.aseprite": {
+    "frame": { "x": 0, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 31.aseprite": {
+    "frame": { "x": 126, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 32.aseprite": {
+    "frame": { "x": 252, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 33.aseprite": {
+    "frame": { "x": 378, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 34.aseprite": {
+    "frame": { "x": 504, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 35.aseprite": {
+    "frame": { "x": 630, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 36.aseprite": {
+    "frame": { "x": 756, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 37.aseprite": {
+    "frame": { "x": 882, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 38.aseprite": {
+    "frame": { "x": 1008, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 39.aseprite": {
+    "frame": { "x": 1134, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 40.aseprite": {
+    "frame": { "x": 1260, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 41.aseprite": {
+    "frame": { "x": 1386, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 42.aseprite": {
+    "frame": { "x": 1512, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 43.aseprite": {
+    "frame": { "x": 1638, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 44.aseprite": {
+    "frame": { "x": 1764, "y": 184, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 45.aseprite": {
+    "frame": { "x": 0, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 46.aseprite": {
+    "frame": { "x": 126, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 47.aseprite": {
+    "frame": { "x": 252, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 48.aseprite": {
+    "frame": { "x": 378, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 49.aseprite": {
+    "frame": { "x": 504, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 50.aseprite": {
+    "frame": { "x": 630, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 51.aseprite": {
+    "frame": { "x": 756, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 52.aseprite": {
+    "frame": { "x": 882, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 53.aseprite": {
+    "frame": { "x": 1008, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 54.aseprite": {
+    "frame": { "x": 1134, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 55.aseprite": {
+    "frame": { "x": 1260, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 56.aseprite": {
+    "frame": { "x": 1386, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 57.aseprite": {
+    "frame": { "x": 1512, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 58.aseprite": {
+    "frame": { "x": 1638, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 59.aseprite": {
+    "frame": { "x": 1764, "y": 276, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 60.aseprite": {
+    "frame": { "x": 0, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 61.aseprite": {
+    "frame": { "x": 126, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 62.aseprite": {
+    "frame": { "x": 252, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 63.aseprite": {
+    "frame": { "x": 378, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 64.aseprite": {
+    "frame": { "x": 504, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 65.aseprite": {
+    "frame": { "x": 630, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 66.aseprite": {
+    "frame": { "x": 756, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 67.aseprite": {
+    "frame": { "x": 882, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 68.aseprite": {
+    "frame": { "x": 1008, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 69.aseprite": {
+    "frame": { "x": 1134, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 70.aseprite": {
+    "frame": { "x": 1260, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 71.aseprite": {
+    "frame": { "x": 1386, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 72.aseprite": {
+    "frame": { "x": 1512, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 73.aseprite": {
+    "frame": { "x": 1638, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 74.aseprite": {
+    "frame": { "x": 1764, "y": 368, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 75.aseprite": {
+    "frame": { "x": 0, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 76.aseprite": {
+    "frame": { "x": 126, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 77.aseprite": {
+    "frame": { "x": 252, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 78.aseprite": {
+    "frame": { "x": 378, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 79.aseprite": {
+    "frame": { "x": 504, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 80.aseprite": {
+    "frame": { "x": 630, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 81.aseprite": {
+    "frame": { "x": 756, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 82.aseprite": {
+    "frame": { "x": 882, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 83.aseprite": {
+    "frame": { "x": 1008, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 84.aseprite": {
+    "frame": { "x": 1134, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 85.aseprite": {
+    "frame": { "x": 1260, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 86.aseprite": {
+    "frame": { "x": 1386, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 87.aseprite": {
+    "frame": { "x": 1512, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 88.aseprite": {
+    "frame": { "x": 1638, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 89.aseprite": {
+    "frame": { "x": 1764, "y": 460, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 90.aseprite": {
+    "frame": { "x": 0, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 91.aseprite": {
+    "frame": { "x": 126, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 92.aseprite": {
+    "frame": { "x": 252, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 93.aseprite": {
+    "frame": { "x": 378, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 94.aseprite": {
+    "frame": { "x": 504, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 95.aseprite": {
+    "frame": { "x": 630, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 96.aseprite": {
+    "frame": { "x": 756, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 97.aseprite": {
+    "frame": { "x": 882, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 98.aseprite": {
+    "frame": { "x": 1008, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 500
+   },
+   "Fire_Warrior 99.aseprite": {
+    "frame": { "x": 1134, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 100.aseprite": {
+    "frame": { "x": 1260, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 101.aseprite": {
+    "frame": { "x": 1386, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 102.aseprite": {
+    "frame": { "x": 1512, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 103.aseprite": {
+    "frame": { "x": 1638, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 104.aseprite": {
+    "frame": { "x": 1764, "y": 552, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 105.aseprite": {
+    "frame": { "x": 0, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 106.aseprite": {
+    "frame": { "x": 126, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 107.aseprite": {
+    "frame": { "x": 252, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 108.aseprite": {
+    "frame": { "x": 378, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 109.aseprite": {
+    "frame": { "x": 504, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 110.aseprite": {
+    "frame": { "x": 630, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 111.aseprite": {
+    "frame": { "x": 756, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 112.aseprite": {
+    "frame": { "x": 882, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 113.aseprite": {
+    "frame": { "x": 1008, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 114.aseprite": {
+    "frame": { "x": 1134, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 115.aseprite": {
+    "frame": { "x": 1260, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 116.aseprite": {
+    "frame": { "x": 1386, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 117.aseprite": {
+    "frame": { "x": 1512, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 118.aseprite": {
+    "frame": { "x": 1638, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 119.aseprite": {
+    "frame": { "x": 1764, "y": 644, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 120.aseprite": {
+    "frame": { "x": 0, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 121.aseprite": {
+    "frame": { "x": 126, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 122.aseprite": {
+    "frame": { "x": 252, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 123.aseprite": {
+    "frame": { "x": 378, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 124.aseprite": {
+    "frame": { "x": 504, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 125.aseprite": {
+    "frame": { "x": 630, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 126.aseprite": {
+    "frame": { "x": 756, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 127.aseprite": {
+    "frame": { "x": 882, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 128.aseprite": {
+    "frame": { "x": 1008, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 129.aseprite": {
+    "frame": { "x": 1134, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 130.aseprite": {
+    "frame": { "x": 1260, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 131.aseprite": {
+    "frame": { "x": 1386, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 132.aseprite": {
+    "frame": { "x": 1512, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 133.aseprite": {
+    "frame": { "x": 1638, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 134.aseprite": {
+    "frame": { "x": 1764, "y": 736, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 135.aseprite": {
+    "frame": { "x": 0, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 136.aseprite": {
+    "frame": { "x": 126, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 137.aseprite": {
+    "frame": { "x": 252, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 80
+   },
+   "Fire_Warrior 138.aseprite": {
+    "frame": { "x": 378, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 139.aseprite": {
+    "frame": { "x": 504, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 140.aseprite": {
+    "frame": { "x": 630, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 141.aseprite": {
+    "frame": { "x": 756, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 142.aseprite": {
+    "frame": { "x": 882, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 143.aseprite": {
+    "frame": { "x": 1008, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 144.aseprite": {
+    "frame": { "x": 1134, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 145.aseprite": {
+    "frame": { "x": 1260, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 146.aseprite": {
+    "frame": { "x": 1386, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 147.aseprite": {
+    "frame": { "x": 1512, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 148.aseprite": {
+    "frame": { "x": 1638, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 149.aseprite": {
+    "frame": { "x": 1764, "y": 828, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 150.aseprite": {
+    "frame": { "x": 0, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 151.aseprite": {
+    "frame": { "x": 126, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 152.aseprite": {
+    "frame": { "x": 252, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 153.aseprite": {
+    "frame": { "x": 378, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 154.aseprite": {
+    "frame": { "x": 504, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 155.aseprite": {
+    "frame": { "x": 630, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 156.aseprite": {
+    "frame": { "x": 756, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 157.aseprite": {
+    "frame": { "x": 882, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 158.aseprite": {
+    "frame": { "x": 1008, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 159.aseprite": {
+    "frame": { "x": 1134, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 160.aseprite": {
+    "frame": { "x": 1260, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 161.aseprite": {
+    "frame": { "x": 1386, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 162.aseprite": {
+    "frame": { "x": 1512, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 163.aseprite": {
+    "frame": { "x": 1638, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 164.aseprite": {
+    "frame": { "x": 1764, "y": 920, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 165.aseprite": {
+    "frame": { "x": 0, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 166.aseprite": {
+    "frame": { "x": 126, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 167.aseprite": {
+    "frame": { "x": 252, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 168.aseprite": {
+    "frame": { "x": 378, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 169.aseprite": {
+    "frame": { "x": 504, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 170.aseprite": {
+    "frame": { "x": 630, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 171.aseprite": {
+    "frame": { "x": 756, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 172.aseprite": {
+    "frame": { "x": 882, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 173.aseprite": {
+    "frame": { "x": 1008, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 174.aseprite": {
+    "frame": { "x": 1134, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 175.aseprite": {
+    "frame": { "x": 1260, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 176.aseprite": {
+    "frame": { "x": 1386, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 177.aseprite": {
+    "frame": { "x": 1512, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 178.aseprite": {
+    "frame": { "x": 1638, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 179.aseprite": {
+    "frame": { "x": 1764, "y": 1012, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 180.aseprite": {
+    "frame": { "x": 0, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 181.aseprite": {
+    "frame": { "x": 126, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 182.aseprite": {
+    "frame": { "x": 252, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 183.aseprite": {
+    "frame": { "x": 378, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 184.aseprite": {
+    "frame": { "x": 504, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 185.aseprite": {
+    "frame": { "x": 630, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 186.aseprite": {
+    "frame": { "x": 756, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 187.aseprite": {
+    "frame": { "x": 882, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 188.aseprite": {
+    "frame": { "x": 1008, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 189.aseprite": {
+    "frame": { "x": 1134, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 190.aseprite": {
+    "frame": { "x": 1260, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 191.aseprite": {
+    "frame": { "x": 1386, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 192.aseprite": {
+    "frame": { "x": 1512, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 193.aseprite": {
+    "frame": { "x": 1638, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 194.aseprite": {
+    "frame": { "x": 1764, "y": 1104, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 195.aseprite": {
+    "frame": { "x": 0, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 300
+   },
+   "Fire_Warrior 196.aseprite": {
+    "frame": { "x": 126, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 197.aseprite": {
+    "frame": { "x": 252, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 198.aseprite": {
+    "frame": { "x": 378, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 199.aseprite": {
+    "frame": { "x": 504, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 200.aseprite": {
+    "frame": { "x": 630, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 201.aseprite": {
+    "frame": { "x": 756, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 202.aseprite": {
+    "frame": { "x": 882, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 203.aseprite": {
+    "frame": { "x": 1008, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   },
+   "Fire_Warrior 204.aseprite": {
+    "frame": { "x": 1134, "y": 1196, "w": 126, "h": 92 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 126, "h": 92 },
+    "sourceSize": { "w": 126, "h": 92 },
+    "duration": 100
+   }
+ },
+ "meta": {
+  "app": "https://github.com/LibreSprite/LibreSprite/",
+  "version": "1.1-dev",
+  "image": "D:\\My Fucking Stuff\\Warden-Blade\\Assets\\Fire_Warrior\\Fire_WarriorAseprite\\Fire_Warrior.png",
+  "format": "RGBA8888",
+  "size": { "w": 1890, "h": 1288 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Idle", "from": 0, "to": 7, "direction": "forward" },
+   { "name": "Run", "from": 8, "to": 15, "direction": "forward" },
+   { "name": "Walk", "from": 16, "to": 23, "direction": "forward" },
+   { "name": "Dash", "from": 24, "to": 31, "direction": "forward" },
+   { "name": "Slide", "from": 32, "to": 39, "direction": "forward" },
+   { "name": "Roll", "from": 40, "to": 46, "direction": "forward" },
+   { "name": "Jump", "from": 47, "to": 55, "direction": "forward" },
+   { "name": "JumpAttack", "from": 56, "to": 61, "direction": "forward" },
+   { "name": "Attack", "from": 62, "to": 75, "direction": "forward" },
+   { "name": "IdleBlock", "from": 76, "to": 84, "direction": "forward" },
+   { "name": "Block", "from": 85, "to": 91, "direction": "forward" },
+   { "name": "Crouch", "from": 92, "to": 97, "direction": "forward" },
+   { "name": "CrouchAttack", "from": 98, "to": 103, "direction": "forward" },
+   { "name": "Ladder", "from": 104, "to": 111, "direction": "forward" },
+   { "name": "Spell", "from": 112, "to": 121, "direction": "forward" },
+   { "name": "Spell 2", "from": 122, "to": 138, "direction": "forward" },
+   { "name": "transformation", "from": 139, "to": 151, "direction": "forward" },
+   { "name": "Wall", "from": 152, "to": 155, "direction": "forward" },
+   { "name": "WallClam", "from": 156, "to": 160, "direction": "forward" },
+   { "name": "Hit", "from": 161, "to": 165, "direction": "forward" },
+   { "name": "HitEff", "from": 166, "to": 170, "direction": "forward" },
+   { "name": "Death", "from": 171, "to": 182, "direction": "forward" },
+   { "name": "DeathEff", "from": 183, "to": 194, "direction": "forward" },
+   { "name": "WallClam2", "from": 195, "to": 204, "direction": "forward" }
+  ],
+  "layers": [
+   { "name": "Layer 3", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 1", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 2", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 4", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 5", "opacity": 255, "blendMode": "normal" },
+   { "name": "Layer 6", "opacity": 255, "blendMode": "normal" }
+  ]
+ }
+}
