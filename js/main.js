@@ -1,91 +1,55 @@
-import { Player } from './entities/Player.js';
-import { Enemy } from './entities/Enemy.js';
-import { ENEMY1_CONFIG } from './config/enemyAnimations.js';
-
-const debugPanel = document.getElementById('debug-panel');
-debugPanel.innerHTML = '<p>Loading assets...</p>';
+import { MenuScreen } from './screens/MenuScreen.js';
 
 // Keeps pixel art crisp when scaled up (default is smooth/blurry linear scaling)
 PIXI.TextureSource.defaultOptions.scaleMode = 'nearest';
 
-const app = new PIXI.Application();
-await app.init({
-  width: 960,
-  height: 540,
-  backgroundColor: 0x1a1a1a,
-  antialias: false,
-  roundPixels: true, // avoids sub-pixel blur while moving
+const screens = {
+  menu: document.getElementById('screen-menu'),
+  animtest: document.getElementById('screen-animtest'),
+};
+
+function showScreen(name) {
+  Object.entries(screens).forEach(([key, el]) => {
+    el.classList.toggle('active', key === name);
+  });
+}
+
+// ------------------------------------------------------------------
+// Main menu — loads immediately on page load
+// ------------------------------------------------------------------
+const menuScreen = new MenuScreen(document.getElementById('menu-bg-container'));
+await menuScreen.init();
+
+// ------------------------------------------------------------------
+// Animation Tests screen — only loaded the first time it's opened
+// (avoids loading Odysseus' 205 frames before they're needed)
+// ------------------------------------------------------------------
+let animTestInitialized = false;
+
+document.getElementById('btn-animtest').addEventListener('click', async () => {
+  showScreen('animtest');
+  if (!animTestInitialized) {
+    animTestInitialized = true;
+    const { initAnimationTestScreen } = await import('./screens/AnimationTestScreen.js');
+    await initAnimationTestScreen();
+  }
 });
-document.getElementById('game-container').appendChild(app.canvas);
 
-// ------------------------------------------------------------------
-// Odysseus (Fire_Warrior) — now loaded from the real JSON exported via
-// LibreSprite, with named animations and a consistent anchor point.
-// ------------------------------------------------------------------
-const player = new Player(
-  'Assets/Fire_Warrior/Fire_WarriorAseprite/Fire_Warrior.json',
-  'Assets/Fire_Warrior/Fire_WarriorAseprite/Fire_Warrior.png'
-);
-const playerSprite = await player.load();
-playerSprite.x = 300;
-playerSprite.y = 420;
-playerSprite.scale.set(2.5);
-app.stage.addChild(playerSprite);
-
-// ------------------------------------------------------------------
-// Enemy 1 (Hero and Opponents)
-// ------------------------------------------------------------------
-const enemy = new Enemy(ENEMY1_CONFIG);
-const enemySprite = await enemy.load();
-enemySprite.x = 680;
-enemySprite.y = 420;
-enemySprite.scale.set(2.5);
-app.stage.addChild(enemySprite);
-
-// ------------------------------------------------------------------
-// Debug panel: now shows REAL animation names (no more guessing rows)
-// ------------------------------------------------------------------
-const animNames = player.getAnimationNames();
-debugPanel.innerHTML = `<p><b>${animNames.length} named animations loaded for Odysseus.</b><br>
-Click any button to preview it on the character.</p>`;
-
-animNames.forEach((name) => {
-  const btn = document.createElement('button');
-  btn.textContent = name;
-  btn.onclick = () => {
-    debugPreviewActive = true; // locks the preview until a real input takes over
-    player.setState(name);
-  };
-  debugPanel.appendChild(btn);
+document.getElementById('btn-back-to-menu').addEventListener('click', () => {
+  showScreen('menu');
 });
 
 // ------------------------------------------------------------------
-// Basic test movement, now wired to the real named animations
+// Placeholder buttons — not implemented yet
 // ------------------------------------------------------------------
-const keys = {};
-window.addEventListener('keydown', (e) => (keys[e.key] = true));
-window.addEventListener('keyup', (e) => (keys[e.key] = false));
+document.getElementById('btn-play').addEventListener('click', () => {
+  alert('Gameplay is not implemented yet — coming soon!');
+});
 
-let debugPreviewActive = false;
+document.getElementById('btn-options').addEventListener('click', () => {
+  alert('Options menu not implemented yet.');
+});
 
-app.ticker.add(() => {
-  const moving = keys['ArrowRight'] || keys['ArrowLeft'];
-
-  if (keys['ArrowRight']) {
-    playerSprite.x += 3;
-    playerSprite.scale.x = Math.abs(playerSprite.scale.x);
-    debugPreviewActive = false; // real input takes back control from the debug panel
-  }
-  if (keys['ArrowLeft']) {
-    playerSprite.x -= 3;
-    playerSprite.scale.x = -Math.abs(playerSprite.scale.x);
-    debugPreviewActive = false;
-  }
-
-  if (!debugPreviewActive) {
-    player.setState(moving ? 'Walk' : 'Idle');
-  }
-
-  // Simple enemy: walks in place to test the "walk" state
-  enemy.setState('walk');
+document.getElementById('btn-quit').addEventListener('click', () => {
+  alert('Browsers do not allow web pages to close themselves for security reasons — this button is a placeholder for now.');
 });

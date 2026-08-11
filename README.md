@@ -6,20 +6,23 @@
 warden-blade/
 ├── index.html
 ├── css/
-│   └── style.css
+│   └── style.css                  ← Pixeloid font, menu + animation test styles
 ├── js/
-│   ├── main.js                    ← entry point
+│   ├── main.js                    ← entry point, screen switching
+│   ├── screens/
+│   │   ├── MenuScreen.js          ← alternating parallax backgrounds + music
+│   │   ├── ParallaxBackground.js  ← reusable scrolling-layers component
+│   │   └── AnimationTestScreen.js ← the animation debug view (lazily loaded)
 │   ├── core/
-│   │   ├── SpriteSheetSlicer.js   ← auto-detects frames on non-uniform sheets (Fire_Warrior)
+│   │   ├── AsepriteSheetLoader.js ← reads real Aseprite/LibreSprite JSON exports
+│   │   ├── SpriteSheetSlicer.js   ← auto-detects frames on sheets with no JSON (fallback)
 │   │   └── FrameAnimLoader.js     ← loads standalone-frame animations (Enemy1)
 │   ├── entities/
 │   │   ├── Player.js
 │   │   └── Enemy.js
 │   └── config/
 │       └── enemyAnimations.js
-└── Assets/     ← your full "Assets" folder goes here, exactly as it is on
-                   your PC, no reorganizing needed. The code already points
-                   to the real paths inside it (Fire_Warrior/, Hero_And_Opponents/, etc.)
+└── Assets/     ← your full "Assets" folder, exactly as it is on your PC
 ```
 
 ## 🗂️ Adding your assets (no reorganizing needed)
@@ -88,14 +91,32 @@ prologue is fully playable start to finish").
 
 ## 🔍 What this prototype currently does
 
-- Loads Odysseus (Fire_Warrior) from the real LibreSprite JSON export —
-  24 named animations (Idle, Walk, Run, Attack, Dash, etc.), pixel-accurate
-  frame coordinates, consistent anchor point across all of them (this is
-  what fixed the earlier "floating torso" jitter)
-- Loads Enemy 1 with its real animations (idle, walk, jump, hit, dead,
-  attack A, attack B)
-- Debug panel: buttons for every real animation name, click to preview
-- Arrow key movement, now wired to the real Idle/Walk animations
+- **Main menu** (new): alternates between the two Synth Cities Environment
+  background scenes ("Synth Cities" dusk skyline and "Cyberpunk Street"
+  neon street), each as a 3-layer parallax scroll (right to left, farther
+  layers slower). Buttons: PLAY / OPTIONS / ANIMATION TESTS / QUIT, styled
+  with Pixeloid, loosely following the Ultrakill main menu's stacked
+  left-aligned button layout. PLAY, OPTIONS and QUIT are placeholders for
+  now (they just show an alert).
+- **Animation Tests** button takes you to the existing debug view: loads
+  Odysseus (Fire_Warrior, 24 named animations) and Enemy 1, with buttons
+  to preview any animation by name. This is now lazily loaded — it only
+  loads those assets the first time you click into it, not on page load.
+
+## ⚠️ Open items on the new menu system
+
+- **Only one music track exists in the whole Synth Cities pack**
+  (`cyberpunk-street.mp3`) — both background scenes currently reuse it.
+  If you find/add a second track meant for the dusk "Synth Cities" scene,
+  update its `music` path in `js/screens/MenuScreen.js`.
+- **Parallax scroll speeds are estimated**, not pulled from real data —
+  the pack doesn't ship JSON metadata with exact speeds for web/JS (only
+  a separate Godot project file has that, which isn't part of what we
+  downloaded). Tune the `speed` values in `BACKGROUND_SETS` inside
+  `MenuScreen.js` by eye once you see it scrolling.
+- **Title placeholder**: `#title-placeholder` in `index.html`/`style.css`
+  is an empty dashed box reserving space for the logo — swap it for real
+  title art whenever it's ready.
 
 ## 🧰 About SpriteSheetSlicer.js
 
@@ -106,6 +127,6 @@ useful for any future sheet that doesn't come with exported JSON metadata
 
 ## 🔜 Next step
 
-Fine-tune animation speeds per state (right now everything defaults to the
-same speed), then start wiring real combat inputs (attack, dash, jump)
-instead of just Idle/Walk movement testing.
+Design the title/logo art to drop into the placeholder box, then start
+wiring real combat inputs (attack, dash, jump) on the animation test
+screen instead of just Idle/Walk movement testing.

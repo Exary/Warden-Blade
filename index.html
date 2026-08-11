@@ -3,17 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Warden Blade — Prototype</title>
+  <title>Warden Blade</title>
   <link rel="stylesheet" href="css/style.css">
   <script src="https://pixijs.download/release/pixi.min.js"></script>
 </head>
 <body>
-  <h1>Warden Blade — Base Prototype</h1>
 
-  <div id="game-container"></div>
+  <!-- ===================== MAIN MENU ===================== -->
+  <div id="screen-menu" class="screen active">
+    <div id="menu-bg-container"></div>
 
-  <div id="debug-panel">
-    <p>Loading...</p>
+    <div id="menu-overlay">
+      <div id="title-placeholder">
+        <!-- Logo/title art goes here once designed -->
+      </div>
+
+      <nav id="menu-buttons">
+        <button id="btn-play">PLAY</button>
+        <button id="btn-options">OPTIONS</button>
+        <button id="btn-animtest">ANIMATION TESTS</button>
+        <button id="btn-quit">QUIT</button>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================ ANIMATION TEST SCREEN ================ -->
+  <div id="screen-animtest" class="screen">
+    <button id="btn-back-to-menu">&larr; Back to menu</button>
+    <div id="game-container"></div>
+    <div id="debug-panel">
+      <p>Loading...</p>
+    </div>
   </div>
 
   <script type="module" src="js/main.js"></script>
