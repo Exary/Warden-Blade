@@ -91,13 +91,14 @@ prologue is fully playable start to finish").
 
 ## 🔍 What this prototype currently does
 
-- **Main menu** (new): alternates between the two Synth Cities Environment
-  background scenes ("Synth Cities" dusk skyline and "Cyberpunk Street"
-  neon street), each as a 3-layer parallax scroll (right to left, farther
-  layers slower). Buttons: PLAY / OPTIONS / ANIMATION TESTS / QUIT, styled
-  with Pixeloid, loosely following the Ultrakill main menu's stacked
-  left-aligned button layout. PLAY, OPTIONS and QUIT are placeholders for
-  now (they just show an alert).
+- **Main menu** (new): alternates between four Synth Cities Environment
+  background scenes (Synth Cities dusk skyline, Cyberpunk Street neon,
+  and Version 2 in both "with traffic" and "empty street" variants), each
+  a 3-layer parallax scroll (right to left, farther layers slower), with a
+  1.2s crossfade between transitions. Buttons: PLAY / OPTIONS / ANIMATION
+  TESTS / QUIT, styled with Pixeloid, loosely following the Ultrakill main
+  menu's stacked left-aligned button layout. PLAY, OPTIONS and QUIT are
+  placeholders for now (they just show an alert).
 - **Animation Tests** button takes you to the existing debug view: loads
   Odysseus (Fire_Warrior, 24 named animations) and Enemy 1, with buttons
   to preview any animation by name. This is now lazily loaded — it only
