@@ -82,22 +82,29 @@ canvas {
 #menu-buttons {
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  width: min(420px, 80vw);
+  gap: 12px;
+  width: min(460px, 80vw);
   pointer-events: auto;
 }
 
 #menu-buttons button {
   font-family: 'Pixeloid Sans', monospace;
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: 2px;
-  text-align: left;
-  padding: 16px 24px;
-  background: rgba(10, 10, 18, 0.75);
+  text-align: center;
+  padding: 18px 24px;
+  border-radius: 10px;
+  background: transparent;
   color: #f2f2f2;
   border: 2px solid #f2f2f2;
   cursor: pointer;
   transition: background 0.12s ease, color 0.12s ease;
+}
+
+/* PLAY is pre-highlighted by default, like Ultrakill's menu */
+#btn-play {
+  background: #f2f2f2;
+  color: #0a0a12;
 }
 
 #menu-buttons button:hover,

@@ -15,14 +15,9 @@ function showScreen(name) {
 }
 
 // ------------------------------------------------------------------
-// Main menu — loads immediately on page load
-// ------------------------------------------------------------------
-const menuScreen = new MenuScreen(document.getElementById('menu-bg-container'));
-await menuScreen.init();
-
-// ------------------------------------------------------------------
-// Animation Tests screen — only loaded the first time it's opened
-// (avoids loading Odysseus' 205 frames before they're needed)
+// Button wiring happens FIRST, before loading anything heavy — this
+// way the menu stays clickable/functional even if the background or
+// music fails to load for some reason (missing file, wrong path, etc).
 // ------------------------------------------------------------------
 let animTestInitialized = false;
 
@@ -39,9 +34,6 @@ document.getElementById('btn-back-to-menu').addEventListener('click', () => {
   showScreen('menu');
 });
 
-// ------------------------------------------------------------------
-// Placeholder buttons — not implemented yet
-// ------------------------------------------------------------------
 document.getElementById('btn-play').addEventListener('click', () => {
   alert('Gameplay is not implemented yet — coming soon!');
 });
@@ -53,3 +45,15 @@ document.getElementById('btn-options').addEventListener('click', () => {
 document.getElementById('btn-quit').addEventListener('click', () => {
   alert('Browsers do not allow web pages to close themselves for security reasons — this button is a placeholder for now.');
 });
+
+// ------------------------------------------------------------------
+// Main menu background/music — loaded after buttons are already wired.
+// Wrapped in try/catch so a failed asset load doesn't break navigation.
+// ------------------------------------------------------------------
+const menuScreen = new MenuScreen(document.getElementById('menu-bg-container'));
+try {
+  await menuScreen.init();
+} catch (err) {
+  console.error('Menu background failed to load — buttons still work.', err);
+}
+
