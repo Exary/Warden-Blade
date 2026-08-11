@@ -20,7 +20,7 @@ export async function loadAsepriteSheet(jsonUrl, imageUrl) {
     loadImage(encodeURI(imageUrl)),
   ]);
 
-  const baseTexture = PIXI.Texture.from(image);
+  const baseTexture = PIXI.Texture.from(image, { scaleMode: 'nearest' });
 
   // Frames come as an object (Hash format) whose insertion order matches
   // frame index 0, 1, 2... — Object.values() preserves that order for

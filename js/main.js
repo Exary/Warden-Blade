@@ -5,12 +5,16 @@ import { ENEMY1_CONFIG } from './config/enemyAnimations.js';
 const debugPanel = document.getElementById('debug-panel');
 debugPanel.innerHTML = '<p>Loading assets...</p>';
 
+// Keeps pixel art crisp when scaled up (default is smooth/blurry linear scaling)
+PIXI.TextureSource.defaultOptions.scaleMode = 'nearest';
+
 const app = new PIXI.Application();
 await app.init({
   width: 960,
   height: 540,
   backgroundColor: 0x1a1a1a,
   antialias: false,
+  roundPixels: true, // avoids sub-pixel blur while moving
 });
 document.getElementById('game-container').appendChild(app.canvas);
 
@@ -48,7 +52,10 @@ Click any button to preview it on the character.</p>`;
 animNames.forEach((name) => {
   const btn = document.createElement('button');
   btn.textContent = name;
-  btn.onclick = () => player.setState(name);
+  btn.onclick = () => {
+    debugPreviewActive = true; // locks the preview until a real input takes over
+    player.setState(name);
+  };
   debugPanel.appendChild(btn);
 });
 
@@ -59,19 +66,25 @@ const keys = {};
 window.addEventListener('keydown', (e) => (keys[e.key] = true));
 window.addEventListener('keyup', (e) => (keys[e.key] = false));
 
+let debugPreviewActive = false;
+
 app.ticker.add(() => {
   const moving = keys['ArrowRight'] || keys['ArrowLeft'];
 
   if (keys['ArrowRight']) {
     playerSprite.x += 3;
     playerSprite.scale.x = Math.abs(playerSprite.scale.x);
+    debugPreviewActive = false; // real input takes back control from the debug panel
   }
   if (keys['ArrowLeft']) {
     playerSprite.x -= 3;
     playerSprite.scale.x = -Math.abs(playerSprite.scale.x);
+    debugPreviewActive = false;
   }
 
-  player.setState(moving ? 'Walk' : 'Idle');
+  if (!debugPreviewActive) {
+    player.setState(moving ? 'Walk' : 'Idle');
+  }
 
   // Simple enemy: walks in place to test the "walk" state
   enemy.setState('walk');
