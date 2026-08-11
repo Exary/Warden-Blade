@@ -1,4 +1,5 @@
 import { ParallaxBackground } from './ParallaxBackground.js';
+import { getVolume, onVolumeChange } from '../core/AudioSettings.js';
 
 /**
  * The Synth Cities Environment pack (ansimuz) ships two distinct
@@ -47,7 +48,8 @@ export class MenuScreen {
 
     this.audio = new Audio();
     this.audio.loop = true;
-    this.audio.volume = 0.5;
+    this.audio.volume = getVolume();
+    onVolumeChange((v) => (this.audio.volume = v));
   }
 
   async init() {

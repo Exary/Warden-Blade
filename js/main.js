@@ -1,7 +1,11 @@
 import { MenuScreen } from './screens/MenuScreen.js';
+import { initVolumeHUD } from './ui/VolumeHUD.js';
 
 // Keeps pixel art crisp when scaled up (default is smooth/blurry linear scaling)
 PIXI.TextureSource.defaultOptions.scaleMode = 'nearest';
+
+// Volume control (9 = down, 0 = up) — works on every screen
+initVolumeHUD();
 
 const screens = {
   menu: document.getElementById('screen-menu'),

@@ -118,6 +118,21 @@ prologue is fully playable start to finish").
   is an empty dashed box reserving space for the logo — swap it for real
   title art whenever it's ready.
 
+## 🔊 Volume control
+
+Press **9** to lower / **0** to raise the master volume. Shows a temporary
+bar HUD (auto-hides after ~1.4s). Currently only wired to the menu music,
+but built as a shared `AudioSettings` singleton so any future audio
+(SFX, gameplay music) can plug into the same volume value.
+
+**Known limitation:** the volume bar HUD is drawn with plain CSS blocks,
+not sliced from the `Basic Pixel Health bar and Scroll bar` UI pack — that
+sheet's bar segments are packed too tightly together to reliably
+auto-detect individual frames without a source file (no `.aseprite`/JSON
+came with this particular pack, unlike Fire_Warrior). Swap
+`js/ui/VolumeHUD.js`'s rendering for the real sprite once we have clean
+per-frame coordinates for it.
+
 ## 🧰 About SpriteSheetSlicer.js
 
 This file (the transparency-based auto-detector) isn't used by Fire_Warrior

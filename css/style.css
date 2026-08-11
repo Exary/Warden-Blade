@@ -170,3 +170,61 @@ canvas {
 #debug-panel button:hover {
   background: #34344a;
 }
+
+/* ===================== Volume HUD ===================== */
+#volume-hud {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px 12px;
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #f2f2f2;
+  border-radius: 4px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 999;
+  text-align: center;
+  font-family: 'Pixeloid Sans', monospace;
+}
+
+#volume-hud.visible {
+  opacity: 1;
+}
+
+#volume-bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 3px;
+  height: 30px;
+  margin-bottom: 6px;
+}
+
+.volume-bar {
+  width: 7px;
+  background: #444;
+  opacity: 0.5;
+}
+
+.volume-bar.filled {
+  background: #f2f2f2;
+  opacity: 1;
+}
+
+.volume-bar:nth-child(1)  { height: 20%; }
+.volume-bar:nth-child(2)  { height: 30%; }
+.volume-bar:nth-child(3)  { height: 40%; }
+.volume-bar:nth-child(4)  { height: 50%; }
+.volume-bar:nth-child(5)  { height: 60%; }
+.volume-bar:nth-child(6)  { height: 70%; }
+.volume-bar:nth-child(7)  { height: 80%; }
+.volume-bar:nth-child(8)  { height: 90%; }
+.volume-bar:nth-child(9)  { height: 95%; }
+.volume-bar:nth-child(10) { height: 100%; }
+
+#volume-label {
+  font-size: 13px;
+  letter-spacing: 4px;
+  color: #f2f2f2;
+}
