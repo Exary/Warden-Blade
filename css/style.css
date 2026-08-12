@@ -116,26 +116,60 @@ canvas {
 
 /* ===================== Animation test screen ===================== */
 #screen-animtest {
-  padding: 20px;
+  display: flex;
+  height: 100%;
   color: #e8e8e8;
-  text-align: center;
+}
+
+#animtest-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  background: #14141c;
+  border-right: 1px solid #333;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
   overflow-y: auto;
 }
 
-#btn-back-to-menu {
-  display: block;
-  margin: 0 auto 16px;
-  padding: 6px 14px;
-  background: #262633;
+.sidebar-btn {
+  font-family: 'Pixeloid Sans', monospace;
+  text-align: left;
+  padding: 10px 12px;
+  background: #1e1e29;
   color: #e8e8e8;
-  border: 1px solid #444;
+  border: 1px solid #3a3a4a;
   border-radius: 4px;
   cursor: pointer;
-  font-family: 'Pixeloid Sans', monospace;
+  font-size: 13px;
 }
 
-#btn-back-to-menu:hover {
-  background: #34344a;
+.sidebar-btn:hover {
+  background: #2a2a3a;
+}
+
+.sidebar-btn.primary {
+  background: #3a3a55;
+  border-color: #5a5a80;
+  font-weight: bold;
+}
+
+.sidebar-divider {
+  margin-top: 12px;
+  padding-top: 10px;
+  border-top: 1px solid #333;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+#animtest-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  text-align: center;
 }
 
 #game-container {
@@ -169,6 +203,35 @@ canvas {
 
 #debug-panel button:hover {
   background: #34344a;
+}
+
+/* ===================== Gameplay test view ===================== */
+#gameplay-legend {
+  max-width: 960px;
+  margin: 0 auto 10px;
+  text-align: left;
+  background: #16161d;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 10px 14px;
+  font-family: monospace;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+#gameplay-toast {
+  max-width: 960px;
+  margin: 0 auto;
+  min-height: 22px;
+  font-family: monospace;
+  font-size: 13px;
+  color: #ffb86c;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+#gameplay-toast.visible {
+  opacity: 1;
 }
 
 /* ===================== Volume HUD ===================== */
@@ -227,4 +290,86 @@ canvas {
   font-size: 13px;
   letter-spacing: 4px;
   color: #f2f2f2;
+}
+
+/* ===================== Credits modal ===================== */
+#credits-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7); /* transparent enough to still see the menu background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+  z-index: 1000;
+}
+
+#credits-overlay.visible {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#credits-panel {
+  position: relative;
+  width: min(560px, 90vw);
+  max-height: 80vh;
+  overflow-y: auto;
+  background: rgba(15, 15, 22, 0.95);
+  border: 2px solid #f2f2f2;
+  border-radius: 8px;
+  padding: 28px 24px 20px;
+  font-family: 'Pixeloid Sans', monospace;
+  color: #e8e8e8;
+}
+
+#credits-panel h2 {
+  margin: 0 0 16px;
+  letter-spacing: 2px;
+}
+
+#credits-close {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  background: none;
+  border: none;
+  color: #f2f2f2;
+  font-size: 26px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+#credits-close:hover {
+  color: #ff8080;
+}
+
+#credits-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#credits-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #2a2a3a;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+#credits-list li:last-child {
+  border-bottom: none;
+}
+
+.credits-role {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #888;
+  text-transform: uppercase;
+}
+
+#credits-list a {
+  color: #8fd1ff;
 }

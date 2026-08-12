@@ -23,15 +23,20 @@ export class Player {
     return this.sprite;
   }
 
-  /** Switches to a named animation, e.g. player.setState('Walk') */
-  setState(name) {
-    if (this.currentState === name || !this.animations[name]) return;
+  /**
+   * Switches to a named animation, e.g. player.setState('Walk')
+   * speedMultiplier lets a caller play the same animation faster/slower
+   * without needing a duplicate animation — e.g. Mele reuses 'Spell 2' at
+   * 2x speed so it reads as a quicker, punchier hit than a normal cast.
+   */
+  setState(name, speedMultiplier = 1, force = false) {
+    if ((this.currentState === name && !force) || !this.animations[name]) return;
     this.currentState = name;
 
-    const isOneShot = ['Attack', 'JumpAttack', 'CrouchAttack', 'Hit', 'HitEff', 'Death', 'DeathEff', 'transformation'].includes(name);
+    const isOneShot = ['Attack', 'JumpAttack', 'CrouchAttack', 'Hit', 'HitEff', 'Death', 'DeathEff', 'transformation', 'Spell', 'Spell 2'].includes(name);
 
     this.sprite.textures = this.animations[name];
-    this.sprite.animationSpeed = 0.2;
+    this.sprite.animationSpeed = 0.2 * speedMultiplier;
     this.sprite.loop = !isOneShot;
     this.sprite.gotoAndPlay(0);
   }

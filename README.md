@@ -6,48 +6,79 @@
 warden-blade/
 ├── index.html
 ├── css/
-│   └── style.css                  ← Pixeloid font, menu + animation test styles
+│   └── style.css                        ← fonts, menu, sidebar, gameplay HUD, credits modal
 ├── js/
-│   ├── main.js                    ← entry point, screen switching
+│   ├── main.js                          ← entry point, screen switching
 │   ├── screens/
-│   │   ├── MenuScreen.js          ← alternating parallax backgrounds + music
-│   │   ├── ParallaxBackground.js  ← reusable scrolling-layers component
-│   │   └── AnimationTestScreen.js ← the animation debug view (lazily loaded)
+│   │   ├── MenuScreen.js                ← alternating parallax backgrounds + music
+│   │   ├── ParallaxBackground.js        ← reusable scrolling-layers component
+│   │   ├── AnimationTestScreen.js       ← sidebar hub (Gameplay Test + character list)
+│   │   ├── GameplayTestView.js          ← live keyboard-controlled character test
+│   │   └── CharacterAnimationBrowser.js ← per-character animation preview (old debug view)
 │   ├── core/
-│   │   ├── AsepriteSheetLoader.js ← reads real Aseprite/LibreSprite JSON exports
-│   │   ├── SpriteSheetSlicer.js   ← auto-detects frames on sheets with no JSON (fallback)
-│   │   └── FrameAnimLoader.js     ← loads standalone-frame animations (Enemy1)
+│   │   ├── AsepriteSheetLoader.js       ← reads real Aseprite/LibreSprite JSON exports
+│   │   ├── SpriteSheetSlicer.js         ← auto-detects frames when no JSON exists (fallback)
+│   │   ├── FrameAnimLoader.js           ← loads standalone-frame animations (Enemy1)
+│   │   └── AudioSettings.js             ← shared volume singleton
+│   ├── ui/
+│   │   ├── VolumeHUD.js                 ← 9/0 keys, temporary bar HUD
+│   │   └── CreditsModal.js              ← credits overlay
 │   ├── entities/
 │   │   ├── Player.js
 │   │   └── Enemy.js
 │   └── config/
-│       └── enemyAnimations.js
+│       ├── enemyAnimations.js
+│       ├── characterRoster.js           ← characters listed in the sidebar
+│       └── credits.js                   ← every asset pack + author + link
 └── Assets/     ← your full "Assets" folder, exactly as it is on your PC
 ```
 
+## 🕹️ Gameplay Test — keybinding scheme
+
+Left hand on movement, right hand on abilities, so neither hand has to
+leave its resting position:
+
+| Key | Action |
+|---|---|
+| `A` / `D` | Move left / right (also sets facing + attack direction) |
+| `Shift` (hold) | Run |
+| `Space` | Jump — press again near a screen edge to simulate a wall-jump (placeholder; real wall detection needs the actual level tileset) |
+| `Ctrl` | Dash |
+| `J` | Attack (sword) |
+| `K` | Mele (kick) — placeholder uses the `Spell 2` animation at 2x speed, so it reads faster/punchier than a normal attack instead of just reusing Attack |
+| `L` | Secondary ability (Beam) — placeholder uses `Spell` |
+| `I` | Supercooling — reserved, not implemented yet |
+| `U` | Ground Pound (Pisotón) — reserved, not implemented yet |
+
+**Parry has no dedicated key** — per design, it should trigger automatically
+when Attack or Mele lands on an enemy's attack hitbox at the right moment.
+Not simulated yet since there's no enemy in this test scene.
+
+**Crouch, Slide, and Roll are intentionally not implemented** (descoped for
+now, per direction).
+
+⚠️ This view runs on a placeholder flat floor with no real collision —
+there's no level tileset wired in yet. Physics (gravity, ground, "walls")
+are all temporary stand-ins to be replaced once Legacy Fantasy - Debug Map
+gets wired up as an actual level.
+
+## 🧑‍🤝‍🧑 Character roster (sidebar)
+
+`js/config/characterRoster.js` lists every character with confirmed
+animation data. Only **Fire Warrior** is in there for now — add new
+entries here as more packs (Enemy 1-5, etc.) get their own JSON/data
+pipeline sorted out.
+
 ## 🗂️ Adding your assets (no reorganizing needed)
 
-1. Copy your entire `Assets` folder (from `D:\My Fucking Stuff\Assets`)
-   directly into the repo folder, at the same level as `index.html`
-2. That's it — nothing needs to be moved or renamed inside it. The code
-   already points to the exact confirmed paths:
-   - `Assets/Fire_Warrior/Fire_WarriorAseprite/Fire_Warrior.json`
-   - `Assets/Fire_Warrior/Fire_WarriorAseprite/Fire_Warrior.png`
-     (these two are the LibreSprite export — the JSON + PNG pair with real
-     animation names and pixel-accurate frame coordinates. Drop them into
-     the existing `Fire_WarriorAseprite` folder, next to the `.aseprite`
-     source files)
+1. Copy your entire `Assets` folder directly into the repo folder, at the
+   same level as `index.html` — nothing inside it needs to be moved or
+   renamed, the code already points at the real paths.
+2. Key paths currently in use:
+   - `Assets/Fire_Warrior/Fire_WarriorAseprite/Fire_Warrior.json` + `.png`
    - `Assets/Hero_And_Opponents/1 Enemy/PNG/idle-1.png` (and the rest)
-
-You can upload the whole `Assets` folder (with ALL packs, not just these
-two) without any issue — the current prototype only uses Fire_Warrior and
-Enemy1, everything else just sits there waiting to be wired up later.
-
-⚠️ Note: uploading the full folder also uploads files you don't actually
-need in the final game (previews, .psd, .aseprite, license files, etc.).
-Nothing breaks, it just makes the repo heavier than strictly necessary.
-Not a problem for this prototype — worth cleaning up later if cloning/
-pushing ever starts feeling slow.
+   - `Assets/Synth_Cities/cyberpunk-street-files/Assets/...` (menu backgrounds + music)
+   - `Assets/Legacy_Fantasy/Legacy Fantasy - Debug Map/Assets/Tiles.png` (not wired into code yet — reserved for the first real level)
 
 ## ▶️ Testing it on your PC BEFORE pushing to GitHub
 
@@ -67,82 +98,68 @@ Then open `http://localhost:8000` in your browser.
 Install the "Live Server" extension, right-click on `index.html` →
 "Open with Live Server".
 
-## 🐙 GitHub repo setup
-
-Already covered in-chat via GitHub Desktop — clone the repo, drop the
-project files + `Assets` folder in, commit, push.
+Testing directly on the live GitHub Pages URL also works fine and skips
+this step entirely.
 
 ## 📝 Commit naming style ("Option 3")
 
 Formal version number + a self-aware/funny one-line description of what
-actually changed. Keeps things trackable long-term while keeping the fun
-"parody devlog" tone:
+actually changed:
 
 ```
-Pre-Alpha 0.0.1 - "the machete doesn't know it's a laser blade yet"
-Pre-Alpha 0.0.2 - "Odysseus can walk, sort of"
-Pre-Alpha 0.0.3 - "Enemy1 stopped floating in place, mostly"
+Pre-Alpha 0.0.9 - "Odysseus can now kick things, sort of"
 ```
 
 Bump the patch number (0.0.X) for small iterative changes, minor (0.X.0)
 for a meaningfully new system (e.g. the heat/supercooling system going
-in), and major (X.0.0) reserved for actual playable milestones (e.g. "the
-prologue is fully playable start to finish").
+in), and major (X.0.0) reserved for actual playable milestones.
 
 ## 🔍 What this prototype currently does
 
-- **Main menu** (new): alternates between four Synth Cities Environment
-  background scenes (Synth Cities dusk skyline, Cyberpunk Street neon,
-  and Version 2 in both "with traffic" and "empty street" variants), each
-  a 3-layer parallax scroll (right to left, farther layers slower), with a
-  1.2s crossfade between transitions. Buttons: PLAY / OPTIONS / ANIMATION
-  TESTS / QUIT, styled with Pixeloid, loosely following the Ultrakill main
-  menu's stacked left-aligned button layout. PLAY, OPTIONS and QUIT are
-  placeholders for now (they just show an alert).
-- **Animation Tests** button takes you to the existing debug view: loads
-  Odysseus (Fire_Warrior, 24 named animations) and Enemy 1, with buttons
-  to preview any animation by name. This is now lazily loaded — it only
-  loads those assets the first time you click into it, not on page load.
-
-## ⚠️ Open items on the new menu system
-
-- **Only one music track exists in the whole Synth Cities pack**
-  (`cyberpunk-street.mp3`) — both background scenes currently reuse it.
-  If you find/add a second track meant for the dusk "Synth Cities" scene,
-  update its `music` path in `js/screens/MenuScreen.js`.
-- **Parallax scroll speeds are estimated**, not pulled from real data —
-  the pack doesn't ship JSON metadata with exact speeds for web/JS (only
-  a separate Godot project file has that, which isn't part of what we
-  downloaded). Tune the `speed` values in `BACKGROUND_SETS` inside
-  `MenuScreen.js` by eye once you see it scrolling.
-- **Title placeholder**: `#title-placeholder` in `index.html`/`style.css`
-  is an empty dashed box reserving space for the logo — swap it for real
-  title art whenever it's ready.
+- **Main menu**: alternates between four Synth Cities Environment
+  background scenes with a 1.2s crossfade between transitions. Buttons:
+  PLAY / OPTIONS / ANIMATION TESTS / CREDITS, styled with Pixeloid,
+  loosely following the Ultrakill main menu's stacked button layout.
+  PLAY and OPTIONS are still placeholders (just show an alert).
+- **Animation Tests** now opens a hub with a left sidebar:
+  - **Gameplay Test** (default view): live, keyboard-controlled Odysseus
+    using the keybinding scheme above, with an on-screen legend and a
+    small toast for "not implemented yet" abilities.
+  - **Character list**: pick a character to preview all of its named
+    animations individually via buttons (the old debug view). Only
+    "Fire Warrior" exists in the list for now.
+- **Credits**: semi-transparent modal (menu background still visible
+  behind it) listing every asset pack used, with author + itch.io link.
+  Closes via the × button or by clicking outside the panel.
 
 ## 🔊 Volume control
 
 Press **9** to lower / **0** to raise the master volume. Shows a temporary
 bar HUD (auto-hides after ~1.4s). Currently only wired to the menu music,
-but built as a shared `AudioSettings` singleton so any future audio
-(SFX, gameplay music) can plug into the same volume value.
+but built as a shared `AudioSettings` singleton so any future audio can
+plug into the same volume value.
 
 **Known limitation:** the volume bar HUD is drawn with plain CSS blocks,
 not sliced from the `Basic Pixel Health bar and Scroll bar` UI pack — that
 sheet's bar segments are packed too tightly together to reliably
-auto-detect individual frames without a source file (no `.aseprite`/JSON
-came with this particular pack, unlike Fire_Warrior). Swap
+auto-detect individual frames without a source file. Swap
 `js/ui/VolumeHUD.js`'s rendering for the real sprite once we have clean
 per-frame coordinates for it.
 
-## 🧰 About SpriteSheetSlicer.js
+## ⚠️ Other open items
 
-This file (the transparency-based auto-detector) isn't used by Fire_Warrior
-anymore now that we have real JSON data, but it's kept in the project —
-useful for any future sheet that doesn't come with exported JSON metadata
-(e.g. a raw sheet from a pack that wasn't made in Aseprite).
+- **Only one music track exists in the whole Synth Cities pack** — all
+  four menu background scenes reuse it.
+- **Parallax scroll speeds are estimated**, not pulled from real data —
+  tune the `speed` values in `MenuScreen.js` by eye.
+- **Title placeholder**: `#title-placeholder` is an empty dashed box —
+  swap it for real title art whenever it's ready.
+- **Mele and Secondary ability visuals are placeholders**: Mele reuses
+  `Spell 2` (2x speed), Secondary reuses `Spell` — neither has a real VFX
+  layered on top yet (BDragon1727 effects packs aren't wired in).
 
 ## 🔜 Next step
 
-Design the title/logo art to drop into the placeholder box, then start
-wiring real combat inputs (attack, dash, jump) on the animation test
-screen instead of just Idle/Walk movement testing.
+Wire up the Legacy Fantasy - Debug Map tileset as real level geometry
+(replacing the placeholder flat floor and fake screen-edge "walls" in
+Gameplay Test), then layer in real VFX for Attack/Mele/Beam.

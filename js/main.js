@@ -1,5 +1,6 @@
 import { MenuScreen } from './screens/MenuScreen.js';
 import { initVolumeHUD } from './ui/VolumeHUD.js';
+import { showCredits } from './ui/CreditsModal.js';
 
 // Keeps pixel art crisp when scaled up (default is smooth/blurry linear scaling)
 PIXI.TextureSource.defaultOptions.scaleMode = 'nearest';
@@ -34,7 +35,9 @@ document.getElementById('btn-animtest').addEventListener('click', async () => {
   }
 });
 
-document.getElementById('btn-back-to-menu').addEventListener('click', () => {
+// The animation test screen's sidebar dispatches this instead of holding
+// its own reference back to the menu-switching logic.
+document.addEventListener('warden:back-to-menu', () => {
   showScreen('menu');
 });
 
@@ -46,8 +49,8 @@ document.getElementById('btn-options').addEventListener('click', () => {
   alert('Options menu not implemented yet.');
 });
 
-document.getElementById('btn-quit').addEventListener('click', () => {
-  alert('Browsers do not allow web pages to close themselves for security reasons — this button is a placeholder for now.');
+document.getElementById('btn-credits').addEventListener('click', () => {
+  showCredits();
 });
 
 // ------------------------------------------------------------------
@@ -60,4 +63,3 @@ try {
 } catch (err) {
   console.error('Menu background failed to load — buttons still work.', err);
 }
-
