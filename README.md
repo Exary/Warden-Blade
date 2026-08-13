@@ -35,27 +35,28 @@ warden-blade/
 
 ## 🕹️ Gameplay Test — keybinding scheme
 
-Left hand on movement, right hand on abilities, so neither hand has to
-leave its resting position. **Letters only, on purpose** — Ctrl/Shift/Space
-can trigger browser or OS shortcuts on some setups, so everything lives on
-two comfortable letter clusters instead (QWASD-style on the left,
-IJKL-style on the right):
+**Left hand only handles aiming/walking (`A`/`D`)** — `W`/`S` are
+deliberately left free for future vertical aiming (up-attack, pogo, etc).
+Everything else — jump, run, dash, and every ability — lives on the right
+hand, across two comfortable rows so it never has to leave its resting
+position. Letters only, on purpose — Ctrl/Shift/Space can trigger browser
+or OS shortcuts on some setups.
 
 | Key | Action |
 |---|---|
 | `A` / `D` | Move left / right (also sets facing + attack direction) |
-| `S` (hold) | Run |
-| `W` | Jump — press again near a screen edge to simulate a wall-jump (placeholder; real wall detection needs the actual level tileset) |
-| `Q` | Dash |
+| `I` | Jump — press again near a screen edge to simulate a wall-jump (placeholder; real wall detection needs the actual level tileset) |
+| `U` | Dash — works in the air too |
+| `O` (hold) | Run |
 | `J` | Attack (sword) — the pack's `Attack` tag actually bakes in a 3-hit combo in one animation, so each press plays just one slash (one third of the frame range), cycling through the combo; wait too long between presses (700ms) and it resets to hit 1 |
 | `K` | Mele (kick) — placeholder uses the `Spell 2` animation at 2x speed, so it reads faster/punchier than a normal attack instead of just reusing Attack |
 | `L` | Secondary ability (Beam) — placeholder uses `Spell` |
-| `I` | Supercooling — reserved, not implemented yet |
-| `U` | Ground Pound (Pisotón) — reserved, not implemented yet |
+| `P` | Supercooling — reserved, not implemented yet |
+| `H` | Ground Pound (Pisotón) — reserved, not implemented yet |
 
-**Jump and Dash stay responsive even mid-attack** (evasive tech should
-always be available) — only Attack/Mele/Beam themselves lock out further
-ability input until their current animation finishes.
+**Jump and Dash are always available** — mid-attack, mid-beam, in the air,
+doesn't matter. Only `J`/`K`/`L` (the abilities themselves) lock each
+other out while one is still mid-animation.
 
 **Parry has no dedicated key** — per design, it should trigger automatically
 when Attack or Mele lands on an enemy's attack hitbox at the right moment.
@@ -64,6 +65,12 @@ Not simulated yet since there's no enemy in this test scene.
 **Crouch, Slide, and Roll are intentionally not implemented** (descoped for
 now, per direction).
 
+**Attack hitboxes note:** once real combat hitboxes are implemented, they
+will be defined in code relative to the character's logical facing
+direction/position — NOT derived from the sprite's visual bounding box.
+This sidesteps any inconsistency from the sprite mirroring (body + sword
+together) when the character turns around.
+
 ⚠️ This view runs on a placeholder flat floor with no real collision —
 there's no level tileset wired in yet. Physics (gravity, ground, "walls")
 are all temporary stand-ins to be replaced once Legacy Fantasy - Debug Map
@@ -71,10 +78,13 @@ gets wired up as an actual level.
 
 ## 🧑‍🤝‍🧑 Character roster (sidebar)
 
-`js/config/characterRoster.js` lists every character with confirmed
-animation data. Only **Fire Warrior** is in there for now — add new
-entries here as more packs (Enemy 1-5, etc.) get their own JSON/data
-pipeline sorted out.
+`js/config/characterRoster.js` lists every character. **Fire Warrior** has
+real animation data and works fully. **Merakintsugi** (the $15 Platformer
+Character Pack) is listed as a "pending" placeholder entry — Marco is
+considering buying it, so it's already wired into the roster/credits
+structurally, but has no `jsonUrl`/`imageUrl` yet and just shows an
+informational message when selected. Add the real paths once/if it's
+purchased and exported the same way Fire Warrior was (LibreSprite JSON).
 
 ## 🗂️ Adding your assets (no reorganizing needed)
 

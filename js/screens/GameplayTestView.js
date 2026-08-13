@@ -13,22 +13,24 @@ const ATTACK_COMBO_HITS = 3; // the 'Attack' tag bakes in 3 sword swings — spl
 const COMBO_WINDOW_MS = 700; // reset to hit 1 if you wait too long between presses
 
 /**
- * KEYBINDING SCHEME (left hand = movement, right hand = abilities)
+ * KEYBINDING SCHEME
  * ------------------------------------------------------------------
- * Letters only on purpose — Ctrl/Shift/Space can trigger browser or OS
- * shortcuts on some setups, so everything lives on two comfortable
- * letter clusters instead (QWASD-style on the left, IJKL-style on the
- * right), each reachable without moving either hand.
+ * Left hand does ONLY aiming/walking (A/D) — W/S are deliberately left
+ * free for future vertical aiming (up-attack, pogo, etc). Everything
+ * else (jump, run, dash, and all abilities) lives on the right hand,
+ * across two comfortable rows (J/K/L home row, U/I/O/P/H upper row) so
+ * the hand never has to leave its resting position. Letters only —
+ * Ctrl/Shift/Space can trigger browser/OS shortcuts on some setups.
  *
- *  W          Jump / Wall-jump (press again near a wall edge to climb)
- *  A / D      Move left / right (also sets attack facing direction)
- *  S          Run (hold)
- *  Q          Dash
+ *  A / D      Move left / right (also sets facing + attack direction)
+ *  I          Jump / Wall-jump (press again near a wall edge to climb)
+ *  U          Dash — works in the air too
+ *  O          Run (hold)
  *  J          Attack (sword) — 3-hit combo, one slash per press
  *  K          Mele / kick — placeholder uses 'Spell 2' at 2x speed
  *  L          Secondary ability (Beam) — placeholder uses 'Spell'
- *  I          Supercooling — reserved, not implemented yet
- *  U          Ground Pound (Pisotón) — reserved, not implemented yet
+ *  P          Supercooling — reserved, not implemented yet
+ *  H          Ground Pound (Pisotón) — reserved, not implemented yet
  * Parry has no dedicated key — it triggers automatically when Attack or
  * Mele lands on an enemy attack hitbox (not simulated yet, no enemies here).
  */
@@ -38,9 +40,8 @@ export async function mountGameplayTestView(contentEl) {
     <div id="game-container"></div>
     <div id="gameplay-legend">
       <b>Controls</b><br>
-      A / D — Move &nbsp; | &nbsp; S — Run &nbsp; | &nbsp; W — Jump (again near edge = wall-jump)<br>
-      Q — Dash &nbsp; | &nbsp; J — Attack (combo) &nbsp; | &nbsp; K — Mele &nbsp; | &nbsp; L — Beam<br>
-      I — Supercooling (n/a) &nbsp; | &nbsp; U — Ground Pound (n/a)
+      A / D — Move &nbsp; | &nbsp; O — Run &nbsp; | &nbsp; I — Jump (again near edge = wall-jump) &nbsp; | &nbsp; U — Dash (works in air)<br>
+      J — Attack (combo) &nbsp; | &nbsp; K — Mele &nbsp; | &nbsp; L — Beam &nbsp; | &nbsp; P — Supercooling (n/a) &nbsp; | &nbsp; H — Ground Pound (n/a)
     </div>
     <div id="gameplay-toast"></div>
   `;
@@ -61,7 +62,7 @@ export async function mountGameplayTestView(contentEl) {
     .fill(0x444444);
   app.stage.addChild(groundGraphic);
 
-  const characterEntry = CHARACTER_ROSTER[0]; // Fire Warrior — only one for now
+  const characterEntry = CHARACTER_ROSTER.find((c) => c.jsonUrl); // first fully-wired character
   const player = new Player(characterEntry.jsonUrl, characterEntry.imageUrl);
   const playerSprite = await player.load();
   playerSprite.x = 300;
@@ -115,32 +116,38 @@ export async function mountGameplayTestView(contentEl) {
     }, COMBO_WINDOW_MS);
   }
 
+  function startDash() {
+    dashing = true;
+    dashTimeLeft = DASH_DURATION_MS;
+  }
+
+  function startJump() {
+    if (grounded) {
+      velocityY = -JUMP_FORCE;
+      grounded = false;
+    } else if (canWallJump) {
+      velocityY = -JUMP_FORCE;
+      canWallJump = false;
+    }
+  }
+
   // ------------------------------------------------------------------
-  // Input
+  // Input — Jump and Dash are handled completely outside the ability
+  // lock, unconditionally, so they always work: mid-attack, mid-beam,
+  // in the air, doesn't matter. Only J/K/L (the abilities themselves)
+  // lock each other out while one is mid-animation.
   // ------------------------------------------------------------------
   function handleKeyDown(e) {
     if (keys[e.code]) return; // ignore auto-repeat while held
     keys[e.code] = true;
 
-    // Jump and Dash stay responsive even mid-attack (evasive tech should
-    // always be available) — only the attack/ability keys themselves are
-    // locked out while another one-shot animation is still playing.
-    if (e.code === 'KeyW') {
-      if (grounded) {
-        velocityY = -JUMP_FORCE;
-        grounded = false;
-      } else if (canWallJump) {
-        velocityY = -JUMP_FORCE;
-        canWallJump = false;
-      }
+    if (e.code === 'KeyI') {
+      startJump();
       return;
     }
 
-    if (e.code === 'KeyQ') {
-      if (!dashing && grounded) {
-        dashing = true;
-        dashTimeLeft = DASH_DURATION_MS;
-      }
+    if (e.code === 'KeyU') {
+      if (!dashing) startDash(); // no ground requirement — air dash allowed
       return;
     }
 
@@ -156,10 +163,10 @@ export async function mountGameplayTestView(contentEl) {
       case 'KeyL': // Secondary ability (Beam)
         playOneShot('Spell');
         break;
-      case 'KeyI': // Supercooling — not implemented yet
+      case 'KeyP': // Supercooling — not implemented yet
         showToast('Supercooling — not implemented yet');
         break;
-      case 'KeyU': // Ground Pound — not implemented yet
+      case 'KeyH': // Ground Pound — not implemented yet
         showToast('Ground Pound — not implemented yet');
         break;
     }
@@ -178,9 +185,11 @@ export async function mountGameplayTestView(contentEl) {
   app.ticker.add(() => {
     const moveLeft = keys['KeyA'];
     const moveRight = keys['KeyD'];
-    const running = keys['KeyS'];
+    const running = keys['KeyO'];
 
-    // --- Dash (overrides normal horizontal movement while active) ---
+    // --- Dash (overrides normal horizontal movement while active,
+    // but does NOT touch vertical velocity — so an air dash keeps
+    // falling/rising naturally instead of freezing height) ---
     if (dashing) {
       playerSprite.x += DASH_SPEED * facing;
       dashTimeLeft -= app.ticker.deltaMS;

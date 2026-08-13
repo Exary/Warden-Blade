@@ -313,19 +313,37 @@ canvas {
 
 #credits-panel {
   position: relative;
-  width: min(560px, 90vw);
+  width: min(640px, 90vw);
   max-height: 80vh;
   overflow-y: auto;
   background: rgba(15, 15, 22, 0.95);
   border: 2px solid #f2f2f2;
   border-radius: 8px;
-  padding: 28px 24px 20px;
+  padding: 28px 26px 20px;
   font-family: 'Pixeloid Sans', monospace;
   color: #e8e8e8;
+
+  /* Thin, subtle scrollbar instead of the chunky browser default */
+  scrollbar-width: thin;
+  scrollbar-color: #444 transparent;
+}
+
+#credits-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+#credits-panel::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+#credits-panel::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 3px;
 }
 
 #credits-panel h2 {
-  margin: 0 0 16px;
+  margin: 0 0 18px;
+  font-size: 26px;
   letter-spacing: 2px;
 }
 
@@ -352,9 +370,8 @@ canvas {
 }
 
 #credits-list li {
-  padding: 8px 0;
+  padding: 12px 0;
   border-bottom: 1px solid #2a2a3a;
-  font-size: 13px;
   line-height: 1.5;
 }
 
@@ -362,14 +379,42 @@ canvas {
   border-bottom: none;
 }
 
+/* Descending hierarchy: role (Aporte) > author > asset name */
 .credits-role {
   display: block;
-  font-size: 11px;
+  font-size: 19px;
   letter-spacing: 1px;
-  color: #888;
-  text-transform: uppercase;
+  color: #f2f2f2;
 }
 
-#credits-list a {
-  color: #8fd1ff;
+.credits-author {
+  display: block;
+  font-size: 16px;
+  color: #cfcfcf;
+}
+
+.credits-asset {
+  display: block;
+  font-size: 13px;
+  color: #888;
+}
+
+/* ===================== Pending character notice ===================== */
+.pending-notice {
+  max-width: 500px;
+  margin: 60px auto;
+  text-align: center;
+  color: #ccc;
+  font-family: 'Pixeloid Sans', monospace;
+}
+
+.pending-notice h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.pending-notice p {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.6;
 }

@@ -2,6 +2,16 @@ import { CHARACTER_ROSTER } from '../config/characterRoster.js';
 import { mountGameplayTestView } from './GameplayTestView.js';
 import { mountCharacterAnimationBrowser } from './CharacterAnimationBrowser.js';
 
+function mountPendingCharacterNotice(contentEl, entry) {
+  contentEl.innerHTML = `
+    <div class="pending-notice">
+      <h3>${entry.label}</h3>
+      <p>${entry.note || 'This character is not wired up yet.'}</p>
+    </div>
+  `;
+  return () => {}; // nothing to tear down
+}
+
 let currentDestroy = null;
 
 async function switchView(mountFn, ...args) {
@@ -39,7 +49,11 @@ export async function initAnimationTestScreen() {
     btn.className = 'sidebar-btn';
     btn.textContent = entry.label;
     btn.addEventListener('click', () => {
-      switchView(mountCharacterAnimationBrowser, entry);
+      if (entry.pending) {
+        switchView(mountPendingCharacterNotice, entry);
+      } else {
+        switchView(mountCharacterAnimationBrowser, entry);
+      }
     });
     characterList.appendChild(btn);
   });

@@ -20,10 +20,13 @@ function build() {
 
   const list = document.createElement('ul');
   list.id = 'credits-list';
-  CREDITS.forEach(({ role, asset, author, url }) => {
+  CREDITS.forEach(({ role, asset, author }) => {
     const li = document.createElement('li');
-    li.innerHTML = `<span class="credits-role">${role}</span>
-      <a href="${url}" target="_blank" rel="noopener">${asset}</a> — ${author}`;
+    li.innerHTML = `
+      <span class="credits-role">${role}</span>
+      <span class="credits-author">${author}</span>
+      <span class="credits-asset">${asset}</span>
+    `;
     list.appendChild(li);
   });
 
