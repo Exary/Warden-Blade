@@ -41,6 +41,26 @@ export class Player {
     this.sprite.gotoAndPlay(0);
   }
 
+  /**
+   * Plays an explicit slice of an animation's frames as a one-shot, e.g.
+   * for splitting a baked-in multi-hit combo (like 'Attack') into
+   * separate single slashes, one per key press.
+   */
+  playFrameSlice(animationName, sliceIndex, sliceCount, speedMultiplier = 1) {
+    const frames = this.animations[animationName];
+    if (!frames) return;
+
+    const sliceSize = Math.ceil(frames.length / sliceCount);
+    const start = sliceIndex * sliceSize;
+    const end = Math.min(frames.length, start + sliceSize);
+
+    this.currentState = null; // invalidate the name-based cache
+    this.sprite.textures = frames.slice(start, end);
+    this.sprite.animationSpeed = 0.2 * speedMultiplier;
+    this.sprite.loop = false;
+    this.sprite.gotoAndPlay(0);
+  }
+
   /** Lists all available animation names (useful for a debug panel) */
   getAnimationNames() {
     return Object.keys(this.animations);

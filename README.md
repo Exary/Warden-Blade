@@ -36,19 +36,26 @@ warden-blade/
 ## 🕹️ Gameplay Test — keybinding scheme
 
 Left hand on movement, right hand on abilities, so neither hand has to
-leave its resting position:
+leave its resting position. **Letters only, on purpose** — Ctrl/Shift/Space
+can trigger browser or OS shortcuts on some setups, so everything lives on
+two comfortable letter clusters instead (QWASD-style on the left,
+IJKL-style on the right):
 
 | Key | Action |
 |---|---|
 | `A` / `D` | Move left / right (also sets facing + attack direction) |
-| `Shift` (hold) | Run |
-| `Space` | Jump — press again near a screen edge to simulate a wall-jump (placeholder; real wall detection needs the actual level tileset) |
-| `Ctrl` | Dash |
-| `J` | Attack (sword) |
+| `S` (hold) | Run |
+| `W` | Jump — press again near a screen edge to simulate a wall-jump (placeholder; real wall detection needs the actual level tileset) |
+| `Q` | Dash |
+| `J` | Attack (sword) — the pack's `Attack` tag actually bakes in a 3-hit combo in one animation, so each press plays just one slash (one third of the frame range), cycling through the combo; wait too long between presses (700ms) and it resets to hit 1 |
 | `K` | Mele (kick) — placeholder uses the `Spell 2` animation at 2x speed, so it reads faster/punchier than a normal attack instead of just reusing Attack |
 | `L` | Secondary ability (Beam) — placeholder uses `Spell` |
 | `I` | Supercooling — reserved, not implemented yet |
 | `U` | Ground Pound (Pisotón) — reserved, not implemented yet |
+
+**Jump and Dash stay responsive even mid-attack** (evasive tech should
+always be available) — only Attack/Mele/Beam themselves lock out further
+ability input until their current animation finishes.
 
 **Parry has no dedicated key** — per design, it should trigger automatically
 when Attack or Mele lands on an enemy's attack hitbox at the right moment.
