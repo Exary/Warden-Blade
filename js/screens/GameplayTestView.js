@@ -41,7 +41,7 @@ export async function mountGameplayTestView(contentEl) {
     <div id="gameplay-legend">
       <b>Controls</b><br>
       A / D — Move &nbsp; | &nbsp; O — Run &nbsp; | &nbsp; I — Jump (again near edge = wall-jump) &nbsp; | &nbsp; U — Dash (works in air)<br>
-      J — Attack (combo) &nbsp; | &nbsp; K — Mele &nbsp; | &nbsp; L — Beam &nbsp; | &nbsp; P — Supercooling (n/a) &nbsp; | &nbsp; H — Ground Pound (n/a)
+      J — Attack (combo) &nbsp; | &nbsp; K — Mele &nbsp; | &nbsp; L — Beam &nbsp; | &nbsp; P — Supercooling (visual only) &nbsp; | &nbsp; H — Ground Pound (n/a)
     </div>
     <div id="gameplay-toast"></div>
   `;
@@ -151,7 +151,7 @@ export async function mountGameplayTestView(contentEl) {
       return;
     }
 
-    if (actionLock) return; // let the current ability animation finish first
+    if (actionLock || dashing) return; // let the current ability/dash finish first
 
     switch (e.code) {
       case 'KeyJ': // Attack — one slash per press, cycling through the 3-hit combo
@@ -163,8 +163,10 @@ export async function mountGameplayTestView(contentEl) {
       case 'KeyL': // Secondary ability (Beam)
         playOneShot('Spell');
         break;
-      case 'KeyP': // Supercooling — not implemented yet
-        showToast('Supercooling — not implemented yet');
+      case 'KeyP': // Supercooling — mechanic not implemented yet, but uses
+                   // 'transformation' as its placeholder visual for now
+        playOneShot('transformation');
+        showToast('Supercooling (visual placeholder) — mechanic not implemented yet');
         break;
       case 'KeyH': // Ground Pound — not implemented yet
         showToast('Ground Pound — not implemented yet');
@@ -220,9 +222,19 @@ export async function mountGameplayTestView(contentEl) {
     // until real level geometry exists ---
     canWallJump = !grounded && (playerSprite.x <= 40 || playerSprite.x >= 920);
 
-    // --- Animation state (skipped while an attack/ability is playing —
-    // it's allowed to keep playing through a jump/dash on top of it) ---
-    if (!actionLock && !dashing) {
+    // --- Animation state: actionLock (Attack/Mele/Beam) ALWAYS takes
+    // priority over dash. This is the fix for a real bug — before, if
+    // dash and an ability overlapped, the looping 'Dash' animation kept
+    // overwriting the ability's one-shot animation every frame, which
+    // meant its onComplete callback never fired, leaving actionLock
+    // stuck forever (sprite frozen on Dash). Checking actionLock first,
+    // exclusively, means dash can never hijack an in-progress ability.
+    if (actionLock) {
+      // Ability animation is already playing (set via playOneShot /
+      // playAttackHit) — leave it alone until it completes on its own.
+    } else if (dashing) {
+      player.setState('Dash', 1, true);
+    } else {
       const moving = moveLeft || moveRight;
       if (!grounded) {
         player.setState('Jump');
@@ -233,8 +245,6 @@ export async function mountGameplayTestView(contentEl) {
       } else {
         player.setState('Idle');
       }
-    } else if (dashing) {
-      player.setState('Dash', 1, true);
     }
   });
 

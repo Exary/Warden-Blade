@@ -51,7 +51,7 @@ or OS shortcuts on some setups.
 | `J` | Attack (sword) — the pack's `Attack` tag actually bakes in a 3-hit combo in one animation, so each press plays just one slash (one third of the frame range), cycling through the combo; wait too long between presses (700ms) and it resets to hit 1 |
 | `K` | Mele (kick) — placeholder uses the `Spell 2` animation at 2x speed, so it reads faster/punchier than a normal attack instead of just reusing Attack |
 | `L` | Secondary ability (Beam) — placeholder uses `Spell` |
-| `P` | Supercooling — reserved, not implemented yet |
+| `P` | Supercooling — mechanic not implemented, but plays `transformation` as its placeholder visual |
 | `H` | Ground Pound (Pisotón) — reserved, not implemented yet |
 
 **Jump and Dash are always available** — mid-attack, mid-beam, in the air,
@@ -162,6 +162,19 @@ sheet's bar segments are packed too tightly together to reliably
 auto-detect individual frames without a source file. Swap
 `js/ui/VolumeHUD.js`'s rendering for the real sprite once we have clean
 per-frame coordinates for it.
+
+## 🎵 Music (found by Marco, not yet wired into code)
+
+Three free BGM packs by doranarasi, way more than needed for the whole
+game (menu, combat, bosses, ambient):
+- SHMUP BGM Pack (40 tracks) — https://doranarasi.itch.io/shmup-bgm-pack
+- JRPG Battle BGM Pack 1 (20 tracks, 10 normal + 10 boss) — https://doranarasi.itch.io/jrpg-battle-bgm-pack-1
+- SHMUP MIDI Pack (40 tracks, raw MIDI-source versions of the SHMUP BGM Pack) — https://doranarasi.itch.io/shmup-midi-pack
+
+License: ogg & m4a formats are free, commercial use OK, no credit
+required (appreciated), cannot be used for NFT content, cannot be
+resold/redistributed as-is. Not wired into the code yet — still need to
+pick specific tracks for specific contexts (menu vs combat vs boss).
 
 ## ⚠️ Other open items
 
