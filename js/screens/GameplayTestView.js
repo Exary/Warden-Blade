@@ -7,7 +7,7 @@ const RUN_SPEED = 5.5;
 const JUMP_FORCE = 13;
 const GRAVITY = 0.6;
 const DASH_SPEED = 11;
-const DASH_DURATION_MS = 180;
+const DASH_DURATION_MS = 300; // was 180 — felt too short
 
 const ATTACK_COMBO_HITS = 3; // the 'Attack' tag bakes in 3 sword swings — split into 1 per press
 const COMBO_WINDOW_MS = 700; // reset to hit 1 if you wait too long between presses
@@ -119,6 +119,11 @@ export async function mountGameplayTestView(contentEl) {
   function startDash() {
     dashing = true;
     dashTimeLeft = DASH_DURATION_MS;
+    // Set the Dash animation ONCE here, not every tick — calling
+    // setState repeatedly with force=true was restarting it back to
+    // frame 0 every frame, so it never actually got to animate (looked
+    // "stiff"/frozen instead of playing through its frames).
+    player.setState('Dash', 1, true);
   }
 
   function startJump() {
@@ -233,7 +238,8 @@ export async function mountGameplayTestView(contentEl) {
       // Ability animation is already playing (set via playOneShot /
       // playAttackHit) — leave it alone until it completes on its own.
     } else if (dashing) {
-      player.setState('Dash', 1, true);
+      // Dash's animation was already started once in startDash() —
+      // don't touch it here, let it keep looping/playing on its own.
     } else {
       const moving = moveLeft || moveRight;
       if (!grounded) {
